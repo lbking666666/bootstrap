@@ -6,20 +6,21 @@ img{max-width: 100%;}
 .top .top-link{ float: right;}
 .top .top-link a{ color: #666;}
 .header{ height: 92px; width: 100%;}
-.nav > li > a.active, .nav > li > a:hover{ background: none; border-bottom: 2px solid #c20009;}
+.nav-drop{ display: none;}
+.nav > li > a.active, .nav > li > a:hover,.nav > li > a:focus{ background:#faf8f9; border-bottom: 2px solid #c20009;}
 .navbar-nav{ background: #eee; position: relative; z-index: 9999; margin: 0 -15px;}
 .navbar-toggle{ background-color: #c20009;}
 .navbar-toggle .icon-bar{ background-color: #fff;}
 /*banner*/
 #banner{ max-width: 1920px ; margin: 0 auto 20px;}
-.carousel-indicators{ bottom: 0px;}
+.carousel-indicators{ bottom: 0;}
 .carousel-control.left {background: url(../images/left.png) no-repeat center center; background-size: 50% auto ;}
 .carousel-control.right {background: url(../images/right.png) no-repeat center center;  background-size: 50% auto ;}
 /* column */
 .column{ margin: 10px 0; padding: 20px 0;}
 .column h2.title{ text-align: center; height: 80px; font-size: 24px; font-weight: 900; background: url(../images/title-bg.png) no-repeat bottom center; margin-bottom: 30px;}
-.column h2.title font,.column h3.hd font{ color: #c20009;}
-.column h2.title i{ color: #666; font-weight: 500; font-family: arial;}
+.column h2.title span,.column h3.hd span{ color: #c20009;}
+.column h2.title i{ color: #666; font-weight: 500; font-family: Arial sans-serif; }
 .column h3.hd{ clear: both; padding: 30px 0; margin-bottom: 30px; font-size: 24px; text-align: center;  background: url(../images/hd-bg.png) no-repeat center center;}
 .column .bd{ text-align: center;}
 .column .bd h5{ padding: 20px 0; font-size: 24px; color: #666;}
@@ -48,7 +49,7 @@ img{max-width: 100%;}
 .solution .col:hover p{color: #c20009;}
 /*server*/
 .server{clear: both; overflow: hidden; position: relative;}
-.server a{ display: block; width: 300px; height: 260px; text-align: center; margin:0px auto;}
+.server a{ display: block; width: 300px; height: 260px; text-align: center; margin:0 auto;}
 .server a.s1{ background: url(../images/server-1.png) no-repeat center center;}
 .server a.s1:hover{ background: url(../images/server-1-hover.png) no-repeat center center;}
 .server a.s2{ background: url(../images/server-2.png) no-repeat center center;}
@@ -64,13 +65,25 @@ img{max-width: 100%;}
 .server a.s7{ background: url(../images/server-7.png) no-repeat center center;}
 .server a.s7:hover{ background: url(../images/server-7-hover.png) no-repeat center center;}
 /*technical*/
-.technical{ padding: 10px 0px; position: relative; text-align: center;}
-.technical a.tech{ margin-bottom: 30px;  width: 25%; max-height: 286px; min-height:200px ; max-height: 516px; display:inline-block;  text-align: center; margin: 0 -3.7%;}
+.technical{ padding: 10px 0; position: relative; text-align: center;}
+.technical a.tech{  width: 25%; min-height:200px ; max-height: 516px; display:inline-block;  text-align: center; margin: 0 -3.7%;}
 .technical a.t1{ background: url(../images/tech-1.png) no-repeat center center;background-size: 100% auto;}
 .technical a.t2{ background: url(../images/tech-2.png) no-repeat center center;background-size: 100% auto;}
 .technical a.t3{ background: url(../images/tech-3.png) no-repeat center center;background-size: 100% auto;}
 .technical a.t4{ background: url(../images/tech-4.png) no-repeat center center;background-size: 100% auto; }
 
+/* common */
+.common .bd p{ width: auto;}
+/* main */
+.main .sider{display: none;}
+.focus{ margin-bottom: 20px; clear: both;}
+.main .main-hd,.main .main-bd{ padding: 10px 20px;}
+.main .main-hd span{ font-size: 16px; line-height: 28px; color: #333;}
+.main .main-hd a{ color: #333;}
+.main .main-bd .tabs{ line-height:32px; text-align: left;}
+.main .main-bd .tabs a{ color: #0078e3; margin: 0 4px; font-size: 18px;}
+.main .main-bd .tabs a.cur{ color: #333;}
+.main .main-bd p{ font-size: 16px; color: #666; width: auto;text-indent: 2em;text-align: left;}
 /* footer*/
 .footer{ background: #eee; padding: 20px 0 40px;}
 .footer h4{ color: #333; font-size: 18px; padding: 10px 0;}
@@ -86,7 +99,7 @@ img{max-width: 100%;}
 @media (min-width: 768px) {
 	.top{ display: block;}
 	.logo{ display: none;}
-	.nav-drop{ display: none;}
+	.nav-drop{  display: none;}
 	.navbar-nav>li>a{line-height: 60px; max-width: 120px; text-align: center; color: #333; font-size: 20px; margin: 0 15px;}
 	.column h2.title{font-size: 32px;}
 	.server a{ display: block; width: 300px; height: 260px; text-align: center; margin: 10px 36px; float: left;}
@@ -96,14 +109,12 @@ img{max-width: 100%;}
 	.carousel-indicators li{ width: 64px; height: 6px; background-color: #868686; border: 0 none; border-radius:0 ; margin: 0;}
 	.carousel-indicators li.active{ background-color: #c20009; width: 64px; height: 6px; border: 0 none;  border-radius:0 ;}
 	.carousel-control.left {background: url(../images/left.png) no-repeat center center;}
-	.carousel-control.right {background: url(../images/right.png) no-repeat center center;}
-	
-	
+	.carousel-control.right {background: url(../images/right.png) no-repeat center center;}	
 }
 @media (min-width: 1200px) {
 	.logo{ display: block; padding-right: 50px;}
 	nav{ position: relative; z-index: 999;}
-	.nav-drop{ position: absolute; z-index: 1000; top:92px; left: 200px;}
+	.nav-drop{ position: absolute; z-index: 1000; top:92px; left: 200px; width: 1000px; height: 600px; display: block;}
 	.nav-drop-wrap{ display: none; clear: both;  width: 960px; height: auto ; padding: 20px;  overflow: hidden; box-shadow: 5px 1px 1px rgba(0,0,0,0.2); background-color: #fff;}
 	.nav-drop-title{ float: left; width: 220px; margin-right: 20px; text-align: center;}
 	.nav-drop-title h3{ margin: 0; padding-bottom: 20px;}
@@ -112,7 +123,7 @@ img{max-width: 100%;}
 	.nav-drop-list dd{ height: 24px; line-height: 24px;}
 	.nav-drop-list dd a{ color: #333;}
 	.navbar-nav>li>a{ width: 120px;font-size: 22px;}
-	.solution{ background: url(../images/solution-bg.png) no-repeat center bottom; clear: both; overflow: hidden; padding:0px 240px 20px; margin-bottom: -40px;}
+	.solution{ background: url(../images/solution-bg.png) no-repeat center bottom; clear: both; overflow: hidden; padding:0 240px 20px; margin-bottom: -40px;}
 	.server{ height: 728px;}
 	.server a{ position: absolute; width: 420px; height: 364px;}
 	.server a.s1{left: 1px; top:263px; background: url(../images/server-11.png) no-repeat center center;}
@@ -136,4 +147,16 @@ img{max-width: 100%;}
 	.technical a.t4:hover{ background: url(../images/tech-4-hover.png) no-repeat center center;}
 	.footer .container{ position: relative;}
 	.footer .about { position: absolute; right: -200px;}
+	.main{ position: relative;}
+	.main .container{ box-shadow: 0 6px 10px rgba(0,0,0,0.3);}
+	.main .main-hd,.main .main-bd{ padding: 10px 20px;}
+	.main .main-hd span{ font-size: 22px; line-height: 36px; color: #333;}
+	.main .main-hd a{ color: #333;}
+	.main .main-bd .tabs{ line-height: 42px; text-align: left;}
+	.main .main-bd .tabs a{ color: #0078e3; margin: 0 4px; font-size: 24px;}
+	.main .main-bd .tabs a.cur{ color: #333;}
+	.main .main-bd p{ font-size: 22px; color: #666;}
+	.main .sider{ display: block; position: absolute; right: 20px; top:20px; width: 252px; height: 210px; padding: 15px;  box-shadow: 0 6px 10px rgba(0,0,0,0.3);}
+	.main .sider h4{ color: #0078e3; font-size: 20px;;}
+	.main .sider p{ font-size: 18px; color: #666;}
 }
